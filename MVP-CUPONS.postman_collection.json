@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "d9a03bec-5ea7-4f49-a8d7-5b77471ca939",
+		"name": "MVP-CUPONS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32021318"
+	},
+	"item": [
+		{
+			"name": "ValidateCoupons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"code\": \"SUMMER50\",\r\n        \"discount\": 20,\r\n        \"metadata\": {\r\n            \"isAll\": true,\r\n            \"isClub\": true\r\n        },\r\n    \"totalAmount\": 10.00\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/validate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCoupons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"code\": \"900016652BDAY\",\r\n        \"valid\": true,\r\n        \"discount\": 50,\r\n        \"uniqueUse\": true,\r\n        \"expirationDate\": \"2024-12-13T23:59:59Z\",\r\n        \"metadata\": {\r\n            \"isAll\": true,\r\n            \"isClub\": true\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/createcoupon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createcoupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExpiraCoupons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expired\": \"manual\",\r\n  \"userId\": \"user10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cupons/SUMMER20/expire",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cupons",
+						"SUMMER20",
+						"expire"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"couponCode\": \"900016652BDAY\",\r\n    \"orderID\": \"LivORDER3333\",\r\n    \"userID\": \"USER23\",\r\n    \"transactionId\": \"163256acb\", \r\n    \"discountAmount\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cupons/confirm-payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cupons",
+						"confirm-payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Coupons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/listCoupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listCoupons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "code": "SUMMER50",
+    "orderID": "LivORDER3539",
+    "userID": "USER21",
+    "transactionId": "163256acb",
+    "discount": 20,
+    "metadata": {
+      "isAll": true,
+      "isClub": true
+    },
+    "usedAt": "2024-11-14T19:51:57.875Z"
+  }
+]

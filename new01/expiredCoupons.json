@@ -1,0 +1,42 @@
+[
+  {
+    "code": "SUMMER20",
+    "valid": false,
+    "discount": 20,
+    "uniqueUse": false,
+    "expirationDate": "2024-11-14T19:46:45.343Z",
+    "metadata": {
+      "isAll": true
+    },
+    "createdAt": "2024-11-14T19:45:02.837Z",
+    "expired": "manual",
+    "userId": "user10"
+  },
+  {
+    "code": "SUMMER20",
+    "valid": false,
+    "discount": 20,
+    "uniqueUse": false,
+    "expirationDate": "2024-11-14T19:46:45.343Z",
+    "metadata": {
+      "isAll": true
+    },
+    "createdAt": "2024-11-14T19:45:02.837Z",
+    "expired": "CRON",
+    "userId": "Systems"
+  },
+  {
+    "code": "900016652BDAY",
+    "valid": false,
+    "discount": 50,
+    "uniqueUse": true,
+    "expirationDate": "2024-12-13T23:59:59Z",
+    "metadata": {
+      "isAll": true,
+      "isClub": true
+    },
+    "createdAt": "2024-11-14T19:53:28.824Z",
+    "expired": "CRON",
+    "userId": "Systems"
+  }
+]

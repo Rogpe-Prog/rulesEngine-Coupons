@@ -1,0 +1,14 @@
+[
+  {
+    "code": "SUMMER50",
+    "valid": true,
+    "discount": 20,
+    "uniqueUse": false,
+    "expirationDate": "2024-12-13T23:59:59Z",
+    "metadata": {
+      "isAll": true,
+      "isClub": true
+    },
+    "createdAt": "2024-11-14T19:48:59.521Z"
+  }
+]

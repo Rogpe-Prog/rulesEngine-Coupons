@@ -1,0 +1,48 @@
+[
+  {
+    "conditions": {
+      "all": [
+        {
+          "fact": "coupon-info",
+          "operator": "equal",
+          "value": "SUMMER50",
+          "path": "$.code"
+        },
+        {
+          "fact": "coupon-info",
+          "operator": "equal",
+          "value": true,
+          "path": "$.valid"
+        },
+        {
+          "fact": "coupon-info",
+          "operator": "greaterThan",
+          "value": 0,
+          "path": "$.discount"
+        },
+        {
+          "fact": "coupon-info",
+          "operator": "equal",
+          "value": false,
+          "path": "$.uniqueUse"
+        },
+        {
+          "fact": "coupon-info",
+          "operator": "equal",
+          "value": true,
+          "path": "$.metadata.isClub"
+        }
+      ]
+    },
+    "event": {
+      "type": "apply-discount",
+      "params": {
+        "message": "Cupom SUMMER50 é válido! Desconto de {{discount}}%",
+        "discount": {
+          "fact": "coupon-info",
+          "path": "$.discount"
+        }
+      }
+    }
+  }
+]
